@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "RenderSearchView";
+}
+
+@using (Html.BeginForm("SearchResult", "Library", FormMethod.Get))
+{
+    <p>
+        Find by Publisher: @Html.TextBox("SearchString", "")
+        <input type="submit" value="Search" />
+    </p>
+}
+

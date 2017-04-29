@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="title">
+            University Library 
+            @if (string.IsNullOrEmpty((string)Session["UserName"]) == false)
+            {
+                <h5>@Session["UserName"] logged in</h5>
+            }            
+        </div>
+    </div>
+    <div id="categories">       
+        @Html.ActionLink("Total List of Books","List","Library")
+        @Html.ActionLink("Search Books with Publisher", "RenderSearchView", "Library")    
+        
+        @if (string.IsNullOrEmpty((string)Session["UserName"]))
+        {
+            @Html.ActionLink("Login", "Login", "Library")
+            @Html.ActionLink("Register User", "Register", "Library")
+        }
+        else
+        {
+            @Html.ActionLink("My Library", "MyLib", "Library")
+            @Html.ActionLink("Logout", "Logout", "Library")
+        }
+
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+</body>
+</html>

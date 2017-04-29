@@ -1,0 +1,31 @@
+﻿
+@model UniversityLibrary.WebUI.Models.LoginViewModel
+
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@if (string.IsNullOrEmpty((string)Session["UserName"]))
+{
+
+    using (Html.BeginForm("Login", "Library", FormMethod.Post))
+    {
+        <p>
+            User Name: @Html.TextBox("UserName", "")
+            Password: @Html.Password("Password", "")
+            <input type="submit" value="Login" />
+
+            @Html.ValidationSummary()
+
+        </p>
+    }
+}
+else
+{
+    <p>
+        @Session["UserName"] loged in
+    </p>
+}

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityLibrary.WebUI", "UniversityLibrary.WebUI\UniversityLibrary.WebUI.csproj", "{E803E549-ADF7-469E-8F0C-2B792376D3E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityLibrary.UnitTests", "UniversityLibrary.UnitTests\UniversityLibrary.UnitTests.csproj", "{E12308D6-ABC6-4F78-8603-A169ECD10F37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{41C2490E-05DE-47FF-95B0-D777727E117E}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E803E549-ADF7-469E-8F0C-2B792376D3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E803E549-ADF7-469E-8F0C-2B792376D3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E803E549-ADF7-469E-8F0C-2B792376D3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E803E549-ADF7-469E-8F0C-2B792376D3E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12308D6-ABC6-4F78-8603-A169ECD10F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12308D6-ABC6-4F78-8603-A169ECD10F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12308D6-ABC6-4F78-8603-A169ECD10F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12308D6-ABC6-4F78-8603-A169ECD10F37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

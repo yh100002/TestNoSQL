@@ -1,0 +1,15 @@
+﻿@model UniversityLibrary.WebUI.Models.BooksListViewModel
+
+@{
+    ViewBag.Title = "AddTo";
+}
+
+<h2>MyLib</h2>
+
+@if (Model.Books != null)
+{
+    foreach (var p in Model.Books)
+    {
+        Html.RenderPartial("BookSummary", p);
+    }
+}

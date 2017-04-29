@@ -1,0 +1,20 @@
+﻿
+@model UniversityLibrary.WebUI.Models.LoginViewModel
+
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm("Register", "Library", FormMethod.Post))
+{
+<p>
+User Name: @Html.TextBox("UserName", "")
+Password: @Html.Password("Password", "")
+<input type="submit" value="Register" />
+
+@Html.ValidationSummary()
+
+</p>
+}

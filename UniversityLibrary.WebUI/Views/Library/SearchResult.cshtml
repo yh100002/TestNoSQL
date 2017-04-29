@@ -1,0 +1,13 @@
+﻿@model UniversityLibrary.WebUI.Models.BooksListViewModel
+
+@{
+    ViewBag.Title = "Search Result";
+}
+
+<h2>Search Result</h2>
+
+
+@foreach (var p in Model.Books)
+{
+    Html.RenderPartial("BookSummary", p);
+}

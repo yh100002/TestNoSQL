@@ -1,0 +1,21 @@
+﻿
+@model UniversityLibrary.WebUI.Models.Book
+
+<div class="item">
+    <h3>@Model.Title</h3>
+    @Model.Description
+    <h4>@Model.Publisher</h4>
+    @foreach (var author in Model.Authors)
+    {
+        <div class="item">
+            <h4>@author</h4>
+        </div>
+    }
+
+    @if (string.IsNullOrEmpty((string)Session["UserName"]) == false)
+    {
+        <h4>@Html.ActionLink("Add to My Library", "AddTo", "Library",new { id = Model.Id},null)</h4>
+        <h4>@Html.ActionLink("Remove From My Library", "RemoveFrom", "Library", new { id = Model.Id }, null)</h4>
+    }
+    
+</div>
